@@ -1,0 +1,512 @@
+x$grp.mean=rep(mean(data),each=12);x
+SST=sum((tot.mean-data)^2)
+SSR=sum((tot.mean-grp.mean)^2)
+SSE=sum((grp.mean-data)^2)
+########
+a=c(1, 22.2, 1, 97.8, 1, 29.1, 1, 37.0, 1, 35.8, 1, 44.2, 1, 82.0, 1, 56.0, 1, 9.3, 1, 19.9,
+1, 39.5, 1, 12.8, 2, 15.1, 2, 23.2, 2, 10.5, 2, 13.9, 2, 9.7 ,2 ,19.0, 2, 19.8,
+2, 9.1, 2, 30.1, 2, 15.5, 2, 10.3, 2, 11.0, 3, 10.2, 3, 11.3, 3, 11.4, 3, 5.3, 3, 14.5,
+3, 11.0, 3, 13.6, 3, 33.4, 3, 25.0, 3, 27.0, 3, 36.3, 3, 17.7)
+x1=a[seq(2,24,2)];x2=a[seq(26,48,2)];x3=a[seq(50,72,2)];
+grp=a[seq(1,72,2)];grp
+####독립성 등분산성 확인 산포도
+par(mfrow=c(1,3))
+plot(x1,col='red');plot(x2,col='red');plot(x3,col='red')
+###1WAY ANOVA
+data=c(x1,x2,x3);mean(data)
+###########NO5############
+a=c(1, 22.2, 1, 97.8, 1, 29.1, 1, 37.0, 1, 35.8, 1, 44.2, 1, 82.0, 1, 56.0, 1, 9.3, 1, 19.9,
+1, 39.5, 1, 12.8, 2, 15.1, 2, 23.2, 2, 10.5, 2, 13.9, 2, 9.7 ,2 ,19.0, 2, 19.8,
+2, 9.1, 2, 30.1, 2, 15.5, 2, 10.3, 2, 11.0, 3, 10.2, 3, 11.3, 3, 11.4, 3, 5.3, 3, 14.5,
+3, 11.0, 3, 13.6, 3, 33.4, 3, 25.0, 3, 27.0, 3, 36.3, 3, 17.7)
+x1=a[seq(2,24,2)];x2=a[seq(26,48,2)];x3=a[seq(50,72,2)];
+grp=a[seq(1,72,2)];grp
+####독립성 등분산성 확인 산포도
+par(mfrow=c(1,3))
+plot(x1,col='red');plot(x2,col='red');plot(x3,col='red')
+###1WAY ANOVA
+data=c(x1,x2,x3);mean(data)
+x=data.frame(grp,data)
+x$tot.mean=mean(data)
+x$grp.mean=rep(mean(x1,x2,x3),each=12);x
+SST=sum((tot.mean-data)^2)
+SSR=sum((tot.mean-grp.mean)^2)
+SSE=sum((grp.mean-data)^2)
+###########NO5############
+a=c(1, 22.2, 1, 97.8, 1, 29.1, 1, 37.0, 1, 35.8, 1, 44.2, 1, 82.0, 1, 56.0, 1, 9.3, 1, 19.9,
+1, 39.5, 1, 12.8, 2, 15.1, 2, 23.2, 2, 10.5, 2, 13.9, 2, 9.7 ,2 ,19.0, 2, 19.8,
+2, 9.1, 2, 30.1, 2, 15.5, 2, 10.3, 2, 11.0, 3, 10.2, 3, 11.3, 3, 11.4, 3, 5.3, 3, 14.5,
+3, 11.0, 3, 13.6, 3, 33.4, 3, 25.0, 3, 27.0, 3, 36.3, 3, 17.7)
+x1=a[seq(2,24,2)];x2=a[seq(26,48,2)];x3=a[seq(50,72,2)];
+grp=a[seq(1,72,2)];grp
+####독립성 등분산성 확인 산포도
+par(mfrow=c(1,3))
+plot(x1,col='red');plot(x2,col='red');plot(x3,col='red')
+###1WAY ANOVA
+data=c(x1,x2,x3);mean(data)
+x=data.frame(grp,data)
+x$tot.mean=mean(data)
+x$grp.mean=c(rep(mean(x1),12),rep(mean(x2),12),rep(mean(x3),12))
+SST=sum((tot.mean-data)^2)
+SSR=sum((tot.mean-grp.mean)^2)
+SSE=sum((grp.mean-data)^2)
+x
+###########NO5############
+a=c(1, 22.2, 1, 97.8, 1, 29.1, 1, 37.0, 1, 35.8, 1, 44.2, 1, 82.0, 1, 56.0, 1, 9.3, 1, 19.9,
+1, 39.5, 1, 12.8, 2, 15.1, 2, 23.2, 2, 10.5, 2, 13.9, 2, 9.7 ,2 ,19.0, 2, 19.8,
+2, 9.1, 2, 30.1, 2, 15.5, 2, 10.3, 2, 11.0, 3, 10.2, 3, 11.3, 3, 11.4, 3, 5.3, 3, 14.5,
+3, 11.0, 3, 13.6, 3, 33.4, 3, 25.0, 3, 27.0, 3, 36.3, 3, 17.7)
+x1=a[seq(2,24,2)];x2=a[seq(26,48,2)];x3=a[seq(50,72,2)];
+grp=a[seq(1,72,2)];grp
+####독립성 등분산성 확인 산포도
+par(mfrow=c(1,3))
+plot(x1,col='red');plot(x2,col='red');plot(x3,col='red')
+###1WAY ANOVA
+data=c(x1,x2,x3);mean(data)
+x=data.frame(grp,data)
+x$tot.mean=mean(data)
+x$grp.mean=c(rep(mean(x1),12),rep(mean(x2),12),rep(mean(x3),12))
+SST=sum((x$tot.mean-data)^2)
+SSR=sum((x$tot.mean-x$grp.mean)^2)
+SSE=sum((x$grp.mean-data)^2)
+SST;SSR;SSE
+###########NO5############
+a=c(1, 22.2, 1, 97.8, 1, 29.1, 1, 37.0, 1, 35.8, 1, 44.2, 1, 82.0, 1, 56.0, 1, 9.3, 1, 19.9,
+1, 39.5, 1, 12.8, 2, 15.1, 2, 23.2, 2, 10.5, 2, 13.9, 2, 9.7 ,2 ,19.0, 2, 19.8,
+2, 9.1, 2, 30.1, 2, 15.5, 2, 10.3, 2, 11.0, 3, 10.2, 3, 11.3, 3, 11.4, 3, 5.3, 3, 14.5,
+3, 11.0, 3, 13.6, 3, 33.4, 3, 25.0, 3, 27.0, 3, 36.3, 3, 17.7)
+x1=a[seq(2,24,2)];x2=a[seq(26,48,2)];x3=a[seq(50,72,2)];
+grp=a[seq(1,72,2)];grp
+####독립성 등분산성 확인 산포도
+par(mfrow=c(1,3))
+plot(x1,col='red');plot(x2,col='red');plot(x3,col='red')
+###1WAY ANOVA
+data=c(x1,x2,x3);mean(data)
+x=data.frame(grp,data)
+x$tot.mean=mean(data)
+x$grp.mean=c(rep(mean(x1),12),rep(mean(x2),12),rep(mean(x3),12))
+SST=sum((data-x$tot.mean)^2)
+SSR=sum((x$grp.mean-x$tot.mean)^2)
+SSE=sum((x$grp.mean-data)^2)
+k=3,n=36
+MSR=SSR/(k-1)
+MSE=SSE/(n-k)
+F=MSR/MSE ;F   ##검정통계랴
+###########NO5############
+a=c(1, 22.2, 1, 97.8, 1, 29.1, 1, 37.0, 1, 35.8, 1, 44.2, 1, 82.0, 1, 56.0, 1, 9.3, 1, 19.9,
+1, 39.5, 1, 12.8, 2, 15.1, 2, 23.2, 2, 10.5, 2, 13.9, 2, 9.7 ,2 ,19.0, 2, 19.8,
+2, 9.1, 2, 30.1, 2, 15.5, 2, 10.3, 2, 11.0, 3, 10.2, 3, 11.3, 3, 11.4, 3, 5.3, 3, 14.5,
+3, 11.0, 3, 13.6, 3, 33.4, 3, 25.0, 3, 27.0, 3, 36.3, 3, 17.7)
+x1=a[seq(2,24,2)];x2=a[seq(26,48,2)];x3=a[seq(50,72,2)];
+grp=a[seq(1,72,2)];grp
+####독립성 등분산성 확인 산포도
+par(mfrow=c(1,3))
+plot(x1,col='red');plot(x2,col='red');plot(x3,col='red')
+###1WAY ANOVA
+data=c(x1,x2,x3);mean(data)
+x=data.frame(grp,data)
+x$tot.mean=mean(data)
+x$grp.mean=c(rep(mean(x1),12),rep(mean(x2),12),rep(mean(x3),12))
+SST=sum((data-x$tot.mean)^2)
+SSR=sum((x$grp.mean-x$tot.mean)^2)
+SSE=sum((x$grp.mean-data)^2)
+k=3;n=36
+MSR=SSR/(k-1)
+MSE=SSE/(n-k)
+F=MSR/MSE ;F   ##검정통계랴
+###########NO5############
+a=c(1, 22.2, 1, 97.8, 1, 29.1, 1, 37.0, 1, 35.8, 1, 44.2, 1, 82.0, 1, 56.0, 1, 9.3, 1, 19.9,
+1, 39.5, 1, 12.8, 2, 15.1, 2, 23.2, 2, 10.5, 2, 13.9, 2, 9.7 ,2 ,19.0, 2, 19.8,
+2, 9.1, 2, 30.1, 2, 15.5, 2, 10.3, 2, 11.0, 3, 10.2, 3, 11.3, 3, 11.4, 3, 5.3, 3, 14.5,
+3, 11.0, 3, 13.6, 3, 33.4, 3, 25.0, 3, 27.0, 3, 36.3, 3, 17.7)
+x1=a[seq(2,24,2)];x2=a[seq(26,48,2)];x3=a[seq(50,72,2)];
+grp=a[seq(1,72,2)];grp
+####독립성 등분산성 확인 산포도
+par(mfrow=c(1,3))
+plot(x1,col='red');plot(x2,col='red');plot(x3,col='red')
+###1WAY ANOVA
+data=c(x1,x2,x3);mean(data)
+x=data.frame(grp,data)
+x$tot.mean=mean(data)
+x$grp.mean=c(rep(mean(x1),12),rep(mean(x2),12),rep(mean(x3),12))
+SST=sum((data-x$tot.mean)^2)
+SSR=sum((x$grp.mean-x$tot.mean)^2)
+SSE=sum((x$grp.mean-data)^2)
+k=3;n=36
+MSR=SSR/(k-1);MSR
+MSE=SSE/(n-k);MSE
+F=MSR/MSE ;F   ##검정통계
+###########NO5############
+a=c(1, 22.2, 1, 97.8, 1, 29.1, 1, 37.0, 1, 35.8, 1, 44.2, 1, 82.0, 1, 56.0, 1, 9.3, 1, 19.9,
+1, 39.5, 1, 12.8, 2, 15.1, 2, 23.2, 2, 10.5, 2, 13.9, 2, 9.7 ,2 ,19.0, 2, 19.8,
+2, 9.1, 2, 30.1, 2, 15.5, 2, 10.3, 2, 11.0, 3, 10.2, 3, 11.3, 3, 11.4, 3, 5.3, 3, 14.5,
+3, 11.0, 3, 13.6, 3, 33.4, 3, 25.0, 3, 27.0, 3, 36.3, 3, 17.7)
+x1=a[seq(2,24,2)];x2=a[seq(26,48,2)];x3=a[seq(50,72,2)];
+grp=a[seq(1,72,2)];grp
+####독립성 등분산성 확인 산포도
+par(mfrow=c(1,3))
+plot(x1,col='red');plot(x2,col='red');plot(x3,col='red')
+###1WAY ANOVA
+data=c(x1,x2,x3);mean(data)
+x=data.frame(grp,data)
+x$tot.mean=mean(data)
+x$grp.mean=c(rep(mean(x1),12),rep(mean(x2),12),rep(mean(x3),12))
+SST=sum((data-x$tot.mean)^2)
+SSR=sum((x$grp.mean-x$tot.mean)^2)
+SSE=sum((x$grp.mean-data)^2)
+k=3;n=36
+MSR=SSR/(k-1);MSR
+MSE=SSE/(n-k);MSE
+F=MSR/MSE ;F   ##검정통계량
+p.val=pf(F,k-1,n-1,lower.tail=FALSE);p.val
+p.val<0.05
+###########NO5############
+a=c(1, 22.2, 1, 97.8, 1, 29.1, 1, 37.0, 1, 35.8, 1, 44.2, 1, 82.0, 1, 56.0, 1, 9.3, 1, 19.9,
+1, 39.5, 1, 12.8, 2, 15.1, 2, 23.2, 2, 10.5, 2, 13.9, 2, 9.7 ,2 ,19.0, 2, 19.8,
+2, 9.1, 2, 30.1, 2, 15.5, 2, 10.3, 2, 11.0, 3, 10.2, 3, 11.3, 3, 11.4, 3, 5.3, 3, 14.5,
+3, 11.0, 3, 13.6, 3, 33.4, 3, 25.0, 3, 27.0, 3, 36.3, 3, 17.7)
+x1=a[seq(2,24,2)];x2=a[seq(26,48,2)];x3=a[seq(50,72,2)];
+grp=a[seq(1,72,2)];grp
+####독립성 등분산성 확인 산포도
+par(mfrow=c(1,3))
+plot(x1,col='red');plot(x2,col='red');plot(x3,col='red')
+###1WAY ANOVA
+data=c(x1,x2,x3);mean(data)
+x=data.frame(grp,data)
+x$tot.mean=mean(data)
+x$grp.mean=c(rep(mean(x1),12),rep(mean(x2),12),rep(mean(x3),12))
+SST=sum((data-x$tot.mean)^2)
+SSR=sum((x$grp.mean-x$tot.mean)^2)
+SSE=sum((x$grp.mean-data)^2)
+k=3;n=36
+MSR=SSR/(k-1);MSR
+MSE=SSE/(n-k);MSE
+F=MSR/MSE ;F   ##검정통계량
+p.val=pf(F,k-1,n-1,lower.tail=FALSE);p.val
+p.val<0.05
+p.val=pf(7.850604,k-1,n-1,lower.tail=FALSE);p.val
+p.val<0.05
+##########NO5############
+a=c(1, 22.2, 1, 97.8, 1, 29.1, 1, 37.0, 1, 35.8, 1, 44.2, 1, 82.0, 1, 56.0, 1, 9.3, 1, 19.9,
+1, 39.5, 1, 12.8, 2, 15.1, 2, 23.2, 2, 10.5, 2, 13.9, 2, 9.7 ,2 ,19.0, 2, 19.8,
+2, 9.1, 2, 30.1, 2, 15.5, 2, 10.3, 2, 11.0, 3, 10.2, 3, 11.3, 3, 11.4, 3, 5.3, 3, 14.5,
+3, 11.0, 3, 13.6, 3, 33.4, 3, 25.0, 3, 27.0, 3, 36.3, 3, 17.7)
+x1=a[seq(2,24,2)];x2=a[seq(26,48,2)];x3=a[seq(50,72,2)];
+grp=a[seq(1,72,2)];grp
+####독립성 등분산성 확인 산포도
+par(mfrow=c(1,3))
+plot(x1,col='red');plot(x2,col='red');plot(x3,col='red')
+###1WAY ANOVA
+data=c(x1,x2,x3);mean(data)
+x=data.frame(grp,data)
+x$tot.mean=mean(data)
+x$grp.mean=c(rep(mean(x1),12),rep(mean(x2),12),rep(mean(x3),12))
+SST=sum((data-x$tot.mean)^2)
+SSR=sum((x$grp.mean-x$tot.mean)^2)
+SSE=sum((x$grp.mean-data)^2)
+k=3;n=36
+MSR=SSR/(k-1);MSR
+MSE=SSE/(n-k);MSE
+Fv=MSR/MSE ;Fv  ##검정통계량
+p.val=pf(Fv,k-1,n-1,lower.tail=FALSE);p.val
+p.val<0.05
+###########NO5############
+a=c(1, 22.2, 1, 97.8, 1, 29.1, 1, 37.0, 1, 35.8, 1, 44.2, 1, 82.0, 1, 56.0, 1, 9.3, 1, 19.9,
+1, 39.5, 1, 12.8, 2, 15.1, 2, 23.2, 2, 10.5, 2, 13.9, 2, 9.7 ,2 ,19.0, 2, 19.8,
+2, 9.1, 2, 30.1, 2, 15.5, 2, 10.3, 2, 11.0, 3, 10.2, 3, 11.3, 3, 11.4, 3, 5.3, 3, 14.5,
+3, 11.0, 3, 13.6, 3, 33.4, 3, 25.0, 3, 27.0, 3, 36.3, 3, 17.7)
+x1=a[seq(2,24,2)];x2=a[seq(26,48,2)];x3=a[seq(50,72,2)];
+grp=a[seq(1,72,2)]
+####독립성 등분산성 확인 산포도
+par(mfrow=c(1,3))
+plot(x1,col='red');plot(x2,col='red');plot(x3,col='red')
+###1WAY ANOVA
+data=c(x1,x2,x3)
+x=data.frame(grp,data)
+x$tot.mean=mean(data)
+x$grp.mean=c(rep(mean(x1),12),rep(mean(x2),12),rep(mean(x3),12))
+SST=sum((data-x$tot.mean)^2)
+SSR=sum((x$grp.mean-x$tot.mean)^2)
+SSE=sum((x$grp.mean-data)^2)
+k=3;n=36
+MSR=SSR/(k-1);MSR
+MSE=SSE/(n-k);MSE
+Fv=MSR/MSE ;F  ##검정통계량
+p.val=pf(F,k-1,n-1,lower.tail=FALSE);p.val
+p.val<0.05
+##########NO6#############
+a= c(1, 35, 1, 120, 1 ,90, 1, 109, 1, 82, 1, 40, 1, 68, 1, 84, 1, 124, 1, 77, 1, 140,
+2, 62, 2, 73, 2, 60, 2, 77, 2, 52, 2, 115, 2 ,82 ,2, 52, 2 ,105, 2, 143, 2, 80,
+3, 96, 3, 107, 3 ,63, 3 ,134, 3, 140, 3, 103, 3, 158, 3 ,131, 3, 76, 3 ,69, 3, 69)
+x1=a[seq(2,22,2)];x2=a[seq(24,44,2)];x1=a[seq(46,66,2)];x1;x2;x3
+length(a)
+##########NO6#############
+a= c(1, 35, 1, 120, 1 ,90, 1, 109, 1, 82, 1, 40, 1, 68, 1, 84, 1, 124, 1, 77, 1, 140,
+2, 62, 2, 73, 2, 60, 2, 77, 2, 52, 2, 115, 2 ,82 ,2, 52, 2 ,105, 2, 143, 2, 80,
+3, 96, 3, 107, 3 ,63, 3 ,134, 3, 140, 3, 103, 3, 158, 3 ,131, 3, 76, 3 ,69, 3, 69)
+x1=a[seq(2,22,2)];x2=a[seq(24,44,2)];x3=a[seq(46,66,2)];x1;x2;x3
+##########NO6#############
+a= c(1, 35, 1, 120, 1 ,90, 1, 109, 1, 82, 1, 40, 1, 68, 1, 84, 1, 124, 1, 77, 1, 140,
+2, 62, 2, 73, 2, 60, 2, 77, 2, 52, 2, 115, 2 ,82 ,2, 52, 2 ,105, 2, 143, 2, 80,
+3, 96, 3, 107, 3 ,63, 3 ,134, 3, 140, 3, 103, 3, 158, 3 ,131, 3, 76, 3 ,69, 3, 69)
+x1=a[seq(2,22,2)];x2=a[seq(24,44,2)];x3=a[seq(46,66,2)];x1;x2;x3
+par(mfrow=c(1,3))
+plot(x1,x2,x3, col='red')
+##########NO6#############
+a= c(1, 35, 1, 120, 1 ,90, 1, 109, 1, 82, 1, 40, 1, 68, 1, 84, 1, 124, 1, 77, 1, 140,
+2, 62, 2, 73, 2, 60, 2, 77, 2, 52, 2, 115, 2 ,82 ,2, 52, 2 ,105, 2, 143, 2, 80,
+3, 96, 3, 107, 3 ,63, 3 ,134, 3, 140, 3, 103, 3, 158, 3 ,131, 3, 76, 3 ,69, 3, 69)
+x1=a[seq(2,22,2)];x2=a[seq(24,44,2)];x3=a[seq(46,66,2)];x1;x2;x3
+par(mfrow=c(1,3))
+plot(x1, col='red');plot(x2, col='red')plot(x3)
+##########NO6#############
+a= c(1, 35, 1, 120, 1 ,90, 1, 109, 1, 82, 1, 40, 1, 68, 1, 84, 1, 124, 1, 77, 1, 140,
+2, 62, 2, 73, 2, 60, 2, 77, 2, 52, 2, 115, 2 ,82 ,2, 52, 2 ,105, 2, 143, 2, 80,
+3, 96, 3, 107, 3 ,63, 3 ,134, 3, 140, 3, 103, 3, 158, 3 ,131, 3, 76, 3 ,69, 3, 69)
+x1=a[seq(2,22,2)];x2=a[seq(24,44,2)];x3=a[seq(46,66,2)];x1;x2;x3
+par(mfrow=c(1,3))
+plot(x1, col='red');plot(x2, col='red')plot(x3)
+##########NO6#############
+a= c(1, 35, 1, 120, 1 ,90, 1, 109, 1, 82, 1, 40, 1, 68, 1, 84, 1, 124, 1, 77, 1, 140,
+2, 62, 2, 73, 2, 60, 2, 77, 2, 52, 2, 115, 2 ,82 ,2, 52, 2 ,105, 2, 143, 2, 80,
+3, 96, 3, 107, 3 ,63, 3 ,134, 3, 140, 3, 103, 3, 158, 3 ,131, 3, 76, 3 ,69, 3, 69)
+x1=a[seq(2,22,2)];x2=a[seq(24,44,2)];x3=a[seq(46,66,2)];x1;x2;x3
+par(mfrow=c(1,3))
+plot(x1, col='red');plot(x2, col='red');plot(x3)
+##########NO6#############
+a= c(1, 35, 1, 120, 1 ,90, 1, 109, 1, 82, 1, 40, 1, 68, 1, 84, 1, 124, 1, 77, 1, 140,
+2, 62, 2, 73, 2, 60, 2, 77, 2, 52, 2, 115, 2 ,82 ,2, 52, 2 ,105, 2, 143, 2, 80,
+3, 96, 3, 107, 3 ,63, 3 ,134, 3, 140, 3, 103, 3, 158, 3 ,131, 3, 76, 3 ,69, 3, 69)
+x1=a[seq(2,22,2)];x2=a[seq(24,44,2)];x3=a[seq(46,66,2)];x1;x2;x3
+par(mfrow=c(1,3))
+plot(x1, col='red');plot(x2, col='red');plot(x3,col='red')
+exp(-0.5556*2)
+exp(-0.3189*2)
+exp(-0.3189)
+1-pchisq(5.39,1)
+544.54-5.99
+1-pchisq(538.55,1)
+pchisq(538.55,1)
+pchisq(0.05,1)
+pchisq(0.95,1)
+qchisq(0.05,1)
+qchisq(0.95,1)
+qchisq(1-0.05,1)
+113.04-5.99
+qchisq(0.95,3)
+qchisq(1-0.05,1)
+qchisq(1-0.05,3)
+qchisq(1-0.05,4)
+qchisq(1-0.05,6)
+7.4-5.99
+1-pchisq(1.41,3)
+qchisq(1-0.05,1)
+qchisq(1-0.05,3)
+1-pchisq(1.41,3)
+1-pchisq(107.05,3)
+274.03 - 2.65*65.4666
+284.52 - 3.01*65.4666
+75.61 - 0.17*65.4666
+75.612+198.424
+-0.174-2.483
+75.612+208.912
++(-0.174-2.844)
+274.036 - 2.657*65.4666
+284.524 - 3.018*65.4666
+75.612 - 0.174*65.4666
+qchisq(0.05,3)
+qchisq(0.05,4)
+qchisq(0.05,6)
+1-pchisq(1.41,3)
+-0.4346-3.4461+0.987*10.73
+QCHISQ*(0.05,1)
+QCHISQ(0.05,1)
+qchisq(0.05,1)
+qchisq(0.05,3)
+dchisq(0.05,1)
+qchisq(1-0.05,1)
+1-pchisq(3.8414,1)
+getwd()
+getwd()
+getwd()
+getwd()
+getwd()
+getwd()
+getwd()
+getwd()
+getwd()
+getwd()
+getwd()
+getwd()
+getwd()
+getwd()
+getwd()
+getwd()
+install.packages("dplyr")
+install.packages("dplyr")
+library(dplyr)
+read.csv("class_scores.csv")
+read.csv("C:\Users\User\Desktop\R 이젠\180721\class_scores.csv")
+read.csv("class_scores.csv")
+temp <- data.frame(read.csv("class_scores.csv"))
+temp
+head(temp)
+tail(temp)  ###밑바닥 여섯개 나옴
+summary(Temp)
+summary(temp)
+view(temp)
+View(temp)
+dim(temp)
+head(grade)
+grade <- data.frame(read.csv("class_scores.csv"))
+head(grade)
+View(grade)
+select(grade,Math)
+mean(select(grade,Math))
+mean(select(grade,"Math"))
+mean(as.numeric(select(grade,Math)))
+(select(grade,Math)
+(select(grade,Math))
+select(grade,Math)
+select(grade,"Math")
+dim(select(grade,"Math"))
+grade <- data.frame(read.csv("class_scores.csv"))
+grade
+install.packages("dplyr") #디플라이어 텍스트 분석 최강!
+library(dplyr)
+grade %>% dplyr::select()
+grade <- data.frame(read.csv("class_scores.csv"))
+grade
+head(grade)  ###상위 여섯개 값만 나옴
+tail(grade)  ###밑바닥 여섯개 나옴
+summary(grade)  ###자료의 평균, 사분위 수 등 SUMMARY가 나옴
+View(grade)
+############범위 잡고,
+install.packages("dplyr")
+head(grade)
+grade %>% dplyr::select()
+mean(select(grade,"Math"))
+grade %>% dplyr::select(Math, Enligh, Science)
+grade %>% dplyr::select(Math, English, Science)
+grade %>% dplyr::select(Math, English, Science)%>% head
+grade  %>% dplyr::select(Math, English, Science)  %>% slice(1:10)
+grade %>% dplyr::select(Math, English, Science) %>% head
+grade  %>% dplyr::select(-gender)  %>% slice(1:10)
+grade  %>% dplyr::select(Math, English, Science)  %>% slice(1:10)
+grade  %>% dplyr::select(Math:Writing)  %>% slice(1:10)
+grade  %>% dplyr::select(Math:Writing)  %>% slice(1:3)
+grade  %>% dplyr::select(starts_with("E"))  %>% slice(1:10)
+grade  %>% dplyr::select(everything())  %>% slice(1:5)
+grade  %>% dplyr::select(ends_with("E"))  %>% slice(1:5)
+grade  %>% dplyr::select(starts_with("E"))  %>% slice(1:5)
+grade  %>% dplyr::select(ends_with("E"))  %>% slice(1:5)
+grade  %>% dplyr::select(contains("e"))  %>% slice(1:5)
+grade  %>% dplyr::select(1,3,5)  %>% slice(1:5)
+a=c(1:30);matrix(a,5,6)
+select(1,3,5)
+a=c(1:30);b=matrix(a,5,6)
+select(b,1,3,5)
+select(b,3)
+## 1 국어, 영어, 수학 도메인기(=컬럼)만 가져오기
+temp <- data.frame(read.csv("class_scores.csv"));temp
+temp %>% dplyr::select(Math, English, Science) %>% head
+# "%>% dplyr" : 디플라이어에 있는 select을 사용하겠다.
+# "%>% " : 파이프라인 and와 같은 쓰임.
+## 2 상위 10개 보기
+temp  %>% dplyr::select(-gender)  %>% slice(1:10)
+temp  %>% dplyr::select(1,3,5)  %>% slice(1:5)
+## 1 국어, 영어, 수학 도메인기(=컬럼)만 가져오기
+scores <- data.frame(read.csv("class_scores.csv"));scores
+scores %>% dplyr::select(Math, English, Science) %>% head
+# "%>% dplyr" : 디플라이어에 있는 select을 사용하겠다.
+# "%>% " : 파이프라인 and와 같은 쓰임.
+scores  %>% dplyr::select(contains("e"))  %>% slice(1:5)
+scores  %>% dplyr::filter(grade==1 & gender=='M') %>% slice(1:5)
+scores  %>% dplyr::filter(grade==1 && gender=='M') %>% slice(1:5)
+c(1==1 & 2==1)
+c(1==1 & 2==1,3=2)
+c(1==1 & 2==1,3==2)
+c(1==1 && 2==1,3==2)
+c(1==1 & 2==1)
+c(1==1 && 2==1)
+scores  %>% dplyr::filter(grade==1) %>% slice(1:4)
+scores  %>% dplyr::filter(grade==1 & gender=='M') %>% slice(1:4)
+scores  %>% dplyr::filter(!grade==1) %>% slice(1:5)
+scores  %>% dplyr::filter(grade!=1) %>% slice(1:5)
+scores  %>% dplyr::filter(grade ==1 | grade==2) %>% slice(1:5)
+scores  %>% dplyr::filter(grade ==1 | grade==2) %>% slice(1:20)
+scores  %>% dplyr::filter(grade ==1 | grade==2) %>% tail(5)
+scores  %>% dplyr::filter(Math >= 80) %>% slice(1:5)
+scores  %>% dplyr::filter(Math >= 80 & English >= 70) %>% slice(1:5)
+(Math >= 80 & English >= 70)
+scores  %>% dplyr::filter(Math >= 80 & English >= 70) %>% slice(1:5)
+scores  %>% dplyr::filter(Math >= 80 && English >= 70) %>% slice(1:5)
+scores  %>% dplyr::filter(Stu_ID >= 10101 & Stu_ID <= 10120) %>% slice(1:5)
+scores  %>% dplyr::filter(Stu_ID >= 10101 & Stu_ID <= 10120) %>% tail(1:5)
+scores  %>% dplyr::filter(Stu_ID >= 10101 & Stu_ID <= 10120) %>% tail(5)
+5%%4
+5%/%4
+5%//%4
+5/4
+5%/%4
+5%%2
+5%%3
+scores  %>% dplyr::filter(Stu_ID %%2 ==1 & gender = 'M' & Math >= 90 % Science >= 90) %>% tail(5)
+scores  %>% dplyr::filter(Stu_ID %%2 ==1 & gender == 'M' & Math >= 90 % Science >= 90) %>% tail(5)
+scores  %>% dplyr::filter(Stu_ID %%2 ==1 & gender == 'M' & Math >= 90 & Science >= 90) %>% tail(5)
+#  수학과 과학이 모두 90점 이상인 학생들만 보기
+scores  %>% dplyr::filter(Stu_ID %%2 ==1 & gender == 'M' &
+Math >= 90 & Science >= 90) %>% sliece(1:5)
+scores  %>% dplyr::filter(Stu_ID %%2 ==1 & gender == 'M' &
+Math >= 90 & Science >= 90) %>% slice(1:5)
+scores  %>% dplyr::filter(Math==100 |English==100| Science==100|Marketing==100|Writing==100) %>% tail(5)
+scores  %>% dplyr::filter(Math==0 |English==0| Science==0|
+Marketing==0|Writing==0) %>% slice(1:5)
+scores  %>% dplyr::filter(Math==0 |English==0| Science==0|
+Marketing==0|Writing==0) %>% slice(1:5)
+scores  %>% dplyr::filter(Math==0 ) %>% slice(1:5)
+scores  %>% dplyr::filter(Math==0 ) %>% slice(1:5)
+scores  %>% dplyr::filter(Math==100 |English==100| Science==100|
+Marketing==100|Writing==100) %>% slice(1:5)
+scores  %>% dplyr::filter()
+scores %<% dplyr::mutate(Average=mean(Math,English, Science, Marketing, Writing))
+scores %>% dplyr::mutate(Average=mean(Math,English, Science, Marketing, Writing))
+scores %>% dplyr::mutate(Average=mean(Math+English+Science+Marketing+Writing))
+scores %>% dplyr::mutate(Average=(Math+English+Science+Marketing+Writing))
+scores %>% dplyr::mutate(Average=(Math+English+Science+Marketing+Writing)/5)
+scores<-scores %>% dplyr::
+mutate(Average=(Math+English+Science+Marketing+Writing)/5)
+%>% slice(1:3)
+scores<-scores %>% dplyr::
+mutate(Average=(Math+English+Science+Marketing+Writing)/5)%>% slice(1:3)
+scores<-scores %>% dplyr::
+mutate(Average=(Math+English+Science+Marketing+Writing)/5)
+##  수학과 과학이 모두 90점 이상인 학생들만 보기
+scores  %>% dplyr::filter(Stu_ID %%2 ==1 & gender == 'M' &
+Math >= 90 & Science >= 90) %>% slice(1:5)
+## 9. 학생들 중 한 과목이라도 100점이 있는 학생만 보기
+scores  %>% dplyr::filter(Math==100 |English==100| Science==100|
+Marketing==100|Writing==100) %>% slice(1:5)
+###################### mutate 예제 ######################
+##1. scores에 Average 컬럼(학생 평균점수) 추가
+scores <- scores %>% dplyr::
+mutate(Average=(Math+English+Science+Marketing+Writing)/5)
+scores %>% slice(1:3)
+scores <- scores %>% dplyr::
+mutate(Average=(Math + English + Science + Marketing + Writing)/5)
+###################### mutate 예제 ######################
+##1. scores에 Average 컬럼(학생 평균점수) 추가
+scores <- scores %>% dplyr::
+mutate(Average=(Math + English + Science + Marketing + Writing)/5)
+scores %>% slice(1:3)
+install.packages("rJava")
+source('C:/Users/User/Desktop/R 이젠/180721/OracleDemo.R', echo=TRUE)
+getwd()
+dir.create("../project180728")
+setwd("../project180728")
+list.files()
+install.packages("rJava")
+install.packages("DBI")
+install.packages("RJDBC")
+install.packages("XML")
+source('C:/Users/User/project180728/installpackages.R', echo=TRUE)

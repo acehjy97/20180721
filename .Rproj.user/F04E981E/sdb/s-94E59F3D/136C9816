@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(XML)  \nlibrary(memoise)  \nlibrary(KoNLP)  \nlibrary(wordcloud)  \nlibrary(dplyr)  \nlibrary(ggplot2)  \nlibrary(ggmap)  \nlibrary(rvest)  \nlibrary(RColorBrewer)  \nlibrary(data.table)  \nlibrary(reshape) \nlibrary(stringr)\n## ggplot# ggplot2 문법 구성 기본요소\n# 데이터 프레임 data.frame\n# 색상, 크기 같은 기하학적 요소 aes\n# 점, 선, 모양 같은 기하학적 요소 geoms\n# 통계적 처리방법 stats\n# aes 에서 사용할 스케일 (scale)\n## ggplot(df, aes(x=val, y=val))+geom  : 여기서 +가 dplyr에서의 %>% 역할.\n\ngetwd()\nlist.files()\ntkorean <-read.table(\"학생별국어성적.txt\", header = T, sep=\",\") \n##dplyr랑 같죠 방식이\nggplot2::ggplot(tkorean, aes(x = 이름, y = 점수)) + geom_point()\n\n\ntkorean <-read.table(\"학생별국어성적.txt\", header = T, sep=\",\") \n## + 앞까지는 똑같저.\nggplot2::ggplot(tkorean, aes(x = 이름, y = 점수)) + geom_bar(\n  stat = \"identity\", fill=\"orange\",color=\"dark green\"\n) + theme( axis.text.x = element_text(\n  angle = 25, hjust = 1, vjust=1, color =\"dark green\", size=8\n  )\n)\n \n\n###########################EXCEL 파일################################\ntscores <- read.csv(\"학생별과목별성적_국영수.csv\", header = T);tscores\ntscores <- arrange(tscores,이름,과목);tscores\ninstall.packages(\"plyr\")\nlibrary(plyr)\ntscores <- ddply(tscores, \"이름\", transform, 누적합계 =cumsum(점수), \n                 label = cumsum(점수)-0.5*점수)  ;tscores\n\nggplot2::ggplot(tscores, aes(x=이름, y=점수, fill=과목)) + \n  geom_bar(stat=\"identity\") + \n  geom_text(\n    aes(y=label, label=paste(점수,\"점\")),color=\"black\",size=4) +\n  guides(fill=guide_legend(reverse=T)\n         ) +\n  theme(axis.text.x = element_text(\n    angle=25, hjust=1, vjust=1, color=\"black\", size=8\n  ))\n\n\n##########NEWFILE t\nlist.files()\ntAllScores <- read.table(\"학생별전체성적.txt\" ,header=T,sep=\",\");\ntAllScores[,c(\"이름\",\"영어\")]   ##Change the form into the form we know.\n",
+    "created" : 1533371554347.000,
+    "dirty" : false,
+    "encoding" : "CP949",
+    "folds" : "",
+    "hash" : "2904000403",
+    "id" : "136C9816",
+    "lastKnownWriteTime" : 1533374288,
+    "last_content_update" : 1533374288335,
+    "path" : "C:/Users/User/project180728/GGPLOT2Demo.R",
+    "project_path" : "GGPLOT2Demo.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

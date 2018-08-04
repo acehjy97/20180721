@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(rJava)\nlibrary(DBI)\nlibrary(RJDBC)\nlibrary(XML)\nlibrary(memoise)\nlibrary(KoNLP)\nlibrary(wordcloud)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(ggmap)\nlibrary(rvest)\nlibrary(RColorBrewer)\nlibrary(data.table)\nlibrary(reshape)\n\ngetwd()\nsetwd(\"C:\\\\Users\\User\\project180728\")\nKoNLP::useSejongDic()\ndSeoulNew <- readLines(\"seoul_new.txt\");\nclass(dSeoulNew)\ndSeoulNew <- sapply(dSeoulNew, extractNoun, USE.NAMES = T)  \n#명사추출함.\nclass(dSeoulNew)\ndSeoulNew <- gsub(\"\\\\d+\",\"\",dSeoulNew)\nhead(dSeoulNew)\ndSeoulNew <- unlist(dSeoulNew)\ndSeoulNew <- unlist(dSeoulNew)\nwrite(dSeoulNew, \"seoul_new2.txt\") ###공백 제거된, 1차 정제된 메모 파일 생성.\ndSeoulNew <- read.table(\"seoul_new2.txt\")\nhead(dSeoulNew)\n\n\n\nclass(dSeoulNew)\ndSeoulNew <- gsub(\"\\\\d+\",\"\",dSeoulNew)   ##\\\\d: decimal(숫자뜻함)을 없앤다. 분석대상X\nhead(dSeoulNew)\n\n\n\nplace <- sapply(txt,KoNLP::extractNoun,USE.NAMES = F);place\n\ntemp <- unlist(place)\nplace <- Filter(function(x) (nchar(x)>=3),txt)\n\nplace <- gsub(\"한반도\",\"\", place);place\n#write(unlist(place))\ntest <- brewer.pal(9,place)\nwordcloud(names(table(place)),\n          freq = table(place),\n          scale = c(5,1),\n          ro.per = 0.25,\n          min.freq = 1,\n          random.order = F,\n          random.color = T,\n          colors = palette)\n# \n# x = file(\"seoul.txt\")\n# readLines(x,n=4)\n# \n# y = read.table('https://terms.naver.com/entry.nhn?docId=574440&cid=46618&categoryId=46618',sep=' ')\n# y[1:10,]\n",
+    "created" : 1532765542602.000,
+    "dirty" : false,
+    "encoding" : "CP949",
+    "folds" : "",
+    "hash" : "2080401776",
+    "id" : "50A999BF",
+    "lastKnownWriteTime" : 1533344713,
+    "last_content_update" : 1533344713099,
+    "path" : "C:/Users/User/project180728/TextMining.R",
+    "project_path" : "TextMining.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

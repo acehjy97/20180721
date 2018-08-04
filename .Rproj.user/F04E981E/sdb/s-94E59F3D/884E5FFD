@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "install.packages(\"rJava\")  \ninstall.packages(\"DBI\")  \ninstall.packages(\"RJDBC\")  \ninstall.packages(\"XML\")  \ninstall.packages(\"memoise\")  \ninstall.packages(\"KoNLP\")  \ninstall.packages(\"wordcloud\")  \ninstall.packages(\"dplyr\")  \ninstall.packages(\"ggplot2\")  \ninstall.packages(\"ggmap\")  \ninstall.packages(\"rvest\")  \ninstall.packages(\"RColorBrewer\")  \ninstall.packages(\"data.table\")  \ninstall.packages(\"dplyr\")  \ninstall.packages(\"reshape\")  \ninstall.packages(\"stringr\")\n\n\nlibrary(rJava)  \nlibrary(DBI)  \nlibrary(RJDBC)  \nlibrary(XML)  \nlibrary(memoise)  \nlibrary(KoNLP)  \nlibrary(wordcloud)  \nlibrary(dplyr)  \nlibrary(ggplot2)  \nlibrary(ggmap)  \nlibrary(rvest)  \nlibrary(RColorBrewer)  \nlibrary(data.table)  \nlibrary(reshape) \nlibrary(stringr)\n",
+    "created" : 1532738728490.000,
+    "dirty" : false,
+    "encoding" : "CP949",
+    "folds" : "",
+    "hash" : "4147136218",
+    "id" : "884E5FFD",
+    "lastKnownWriteTime" : 1533344818,
+    "last_content_update" : 1533344818181,
+    "path" : "C:/Users/User/project180728/installpackages.R",
+    "project_path" : "installpackages.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
